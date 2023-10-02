@@ -12,7 +12,7 @@ There are three ways to run the application locally:
 - Run using Python, for that use the command: "flask run --host=0.0.0.0 --port=(port-number)"
 - Run using docker:
     - Build the image: "docker build -t mBition .
-    - Run the image in a container with port mapping: "docker run -p (host-port):5000 mBition-app" 
+    - Run the image in a container with port mapping: "docker run -p (host-port):5000 mBition" 
     - Access the application on localhost:(host-port)
 - Run using kubernetes:
     - Use the manifest in k8s folder.
