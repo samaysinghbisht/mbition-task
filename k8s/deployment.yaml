@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mbition-app
+  namespace: mbition
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mbition
+  template:
+    metadata:
+      labels:
+        app: mbition
+    spec:
+      containers:
+      - name: mbition-app
+        image: samay1993/mbition:latest
+        ports:
+        - containerPort: 5000
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
