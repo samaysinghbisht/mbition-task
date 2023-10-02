@@ -16,7 +16,7 @@ class FlaskAppTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Welcome to the mBition Interview Task', response.data)
         self.assertIn(b'This page serves as the starting point for the interview task.', response.data)
-        self.assertIn(b'Please add an endpoint to the URL /user-list to see the list of users', response.data)
+        self.assertIn(b'lease add an endpoint to the URL <code>/user-list</code> to see the list of users', response.data)
         print("Test1 Pass")
 
     def test_user_list(self):
